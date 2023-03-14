@@ -1,0 +1,16 @@
+.single-proj {
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 3rem;
+
+  .side {
+    display: block;
+  }
+
+  .info {
+    position: sticky;
+    top: 2rem;
+    height: auto;
+  }
+}

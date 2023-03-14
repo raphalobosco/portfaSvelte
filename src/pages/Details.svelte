@@ -10,21 +10,25 @@ import projectsData from '../data/data.json'
 
 </script>
 
-<div>
+<div class="single-proj">
+            <div class="side">
+                <div class="info">
+                    <h1> {project.title} </h1>
+                    <p>{project.desc}</p>
+                    <Link to="/">Back</Link>
+                </div>
+            </div>
+            <div>
+            {#each project.images as index}
+                
+                    <img src={index} key={index} alt="" />
+             {/each}
+            </div>
+        </div >
 
-<h1>{project.title} {id} </h1>
-  <p>{project.desc}</p>
-  <img src={project.photo} alt="">
-</div>
 
-<Link to="/">Back</Link>
 
-<style>
-img{
-  display: block;
-  min-width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 1rem;
-}
+
+<style lang="scss" scoped >
+
 </style>

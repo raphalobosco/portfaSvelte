@@ -8,25 +8,23 @@
 </script>
 <h1>Rapha Lobosco</h1>
 <div class="container">
-  {#each projects as project}
-    <Link to={"/project/" + project.id}>
-    <img src={project.photo} alt="">
-    </Link>
-  {/each}
+  <div class="projects-grid">
+    {#each projects as project}
+      <Link to={"/project/" + project.id}>
+      <div class="item">
+      <img src={project.photo} alt="">
+        <div class="info">
+            <p class="title">{project.title}</p>
+            <p class="category">UX, UI</p>
+        </div>
+      </div>
+      </Link>
+    {/each}
+  </div>
 </div>
 
 
 
-<style>
-.container {
-  
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
-
-  img{
-    width:100%;
-  }
+<style lang="scss">
 
 </style>
