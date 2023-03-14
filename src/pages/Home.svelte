@@ -6,7 +6,7 @@
    const projects = projectsData.projects
 
 </script>
-
+<h1>Rapha Lobosco</h1>
 <div class="container">
   {#each projects as project}
     <Link to={"/project/" + project.id}>
